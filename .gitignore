@@ -1,0 +1,9 @@
+/bin
+/.vscode
+/.idea
+/data
+
+.env
+
+/pg_data
+/server

@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option go_package = "gitlab.ozon.dev/albatros2002/telegram-bot/reports/reports";
+
+package reports;
+
+service Reporter {
+  rpc SendReport (ReportRequest) returns (ReportResponse) {}
+}
+
+message ReportRequest {
+  int64 userId = 1;
+  string message = 2;
+}
+
+message ReportResponse {
+  string status = 1;
+}
