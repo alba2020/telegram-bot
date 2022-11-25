@@ -1,2 +1,7 @@
 token:
 pg_dsn:
+reports_server_address: localhost:50051
+topic: example-topic
+brokers_list:
+  - kafka:9092
+consumer_group: example-consumer-group

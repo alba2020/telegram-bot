@@ -45,7 +45,7 @@ func (repo *RecordPGRepo) Save(ctx context.Context, rec *domain.Record) (int64, 
 	for rows.Next() {
 		err := rows.Scan(&id)
 		if err != nil {
-			logger.Fatal(err)
+			logger.Error(err)
 			return -1, err
 		} else {
 			logger.Debug("saved id = ", id)

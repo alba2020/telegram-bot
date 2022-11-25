@@ -23,7 +23,7 @@ func (c *ReportsController) ReportCommand(msg *domain.Message) *domain.Message {
 	v := "report"
 	err := c.reportsService.RequestReport(k, v)
 	if err != nil {
-		logger.Fatal("Failed to send message:", err)
+		logger.Error("Failed to send message:", err)
 	}
 
 	return msg.Reply("Generating report...")

@@ -9,7 +9,7 @@ service Reporter {
 }
 
 message ReportRequest {
-  int64 userId = 1;
+  int64 user_id = 1;
   string message = 2;
 }
 
